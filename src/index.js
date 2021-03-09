@@ -6,4 +6,9 @@ const timer1 = new CountdownTimer({
   targetDate: new Date('March 20, 2021'),
 });
 
-// timer1.start();
+document
+  .querySelector('#controls-1 > [data-action="start"]')
+  .addEventListener('click', timer1.start.bind(timer1));
+document
+  .querySelector('#controls-1 > [data-action="stop"]')
+  .addEventListener('click', timer1.stop.bind(timer1));
